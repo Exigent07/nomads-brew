@@ -1,21 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&family=Raleway:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF9F4;
+  --foreground: #CCCCCC;
+  --text-color: #333333;
+  --primary: #4E342E;
+  --secondary: #F3E5AB;
+  --accent: #B29055;
+  --neutral: #D7A478;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*::selection {
+  background-color: var(--text-color);
+  color: var(--background);
+}
+
+*::-moz-selection {
+  background-color: var(--text-color);
+  color: var(--background);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }

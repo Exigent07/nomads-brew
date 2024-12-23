@@ -10,6 +10,17 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        textColor: "var(--text-color)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+        neutral: "var(--neutral)",
+      },
+      fontFamily: {
+        heading: ["'Playfair Display'", "serif"],
+        body: ["'Lato'", "sans-serif"],
+        special: ["'Raleway'", "sans-serif"],
+        logo: ["'Anton'", "sans-serif"],
       },
     },
   },
