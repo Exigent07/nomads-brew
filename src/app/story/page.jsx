@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import Logo from "@/components/Logo";
 import Nav from "@/components/Nav";
-import MouseFollow from "@/components/MouseFollow";
 import BlenderIcon from "../../../public/blender.svg";
 import Footer from "@/components/Footer";
 import Button from "@/components/Button";
@@ -13,17 +12,9 @@ export default function Story() {
 
   return (
     <>
-      <MouseFollow
-        className="hidden lg:flex"
-        offset={{
-          x: 25,
-          y: 120,
-        }}
-      />
-
       <main
         ref={mainRef}
-        className="relative flex flex-col mt-[5%] items-center justify-center min-h-screen w-screen bg-background"
+        className="relative flex flex-col pt-[10%] sm:pt-[10%] md:pt-[5%] items-center justify-center min-h-screen w-screen bg-background"
       >
         <Nav 
           smallIconClass="h-6 w-6 !mx-[0.125rem] !mt-[0.125rem]"
@@ -101,7 +92,7 @@ export default function Story() {
           <p className="text-textColor text-sm sm:text-md md:text-lg lg:text-xl max-w-3xl text-center font-body mb-6">
             Explore our range of handcrafted blends and experience the world of coffee like never before.
           </p>
-          <Button text="View Our Menu" />
+          <Button text="View Our Menu" path="/menu" />
         </section>
 
         <Footer />

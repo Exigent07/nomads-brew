@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 import Logo from "@/components/Logo";
 import { useGSAP } from "@gsap/react";
 import Nav from "@/components/Nav";
-import MouseFollow from "@/components/MouseFollow";
 import BeanIcon from "../../public/bean.svg";
 import Button from "@/components/Button";
 import PageCounter from "@/components/PageCounter";
@@ -99,7 +98,6 @@ export default function Home() {
 
   return (
     <>
-      <MouseFollow className="hidden lg:flex" />
       <div
         ref={loadingRef}
         id="loading"
@@ -161,6 +159,7 @@ export default function Home() {
             backgroundColor="#333333"
             textColor="#FFF9F4"
             text="Full Story"
+            path="/story"
           />
         </section>
         <section ref={addToSectionsRef} id="story-section" className="h-screen w-screen flex flex-col items-center justify-around">
@@ -204,6 +203,7 @@ export default function Home() {
             backgroundColor="#333333"
             textColor="#FFF9F4"
             text="View Menu"
+            path="/menu"
           />
         </section>
         <PageCounter currentPage={currentPage} totalPages={3} />

@@ -3,7 +3,6 @@
 import { useState, useRef } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import MouseFollow from "@/components/MouseFollow";
 import Button from "@/components/Button";
 
 export default function Contact() {
@@ -41,7 +40,6 @@ export default function Contact() {
 
   return (
     <>
-      <MouseFollow className="hidden lg:flex" />
       <main className="relative flex flex-col items-center pt-[10%] sm:pt-[10%] md:pt-[5%] justify-center min-h-screen w-screen bg-background">
         <Nav
           smallIconClass="h-6 w-6 !mx-[0.125rem] !mt-[0.125rem]"

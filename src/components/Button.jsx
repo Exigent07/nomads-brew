@@ -4,11 +4,13 @@ import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import SplitText from "@/utils/SplitText";
+import { useRouter } from "next/navigation";
 
 export default function Button({
   className = "",
   text = "Button",
   type = "",
+  path = "/",
   textClass = "",
   backgroundColor = "#000",
   textColor = "#fff",
@@ -17,6 +19,7 @@ export default function Button({
 }) {
   const buttonRef = useRef(null);
   const overlayRef = useRef(null);
+  const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
 
   useGSAP(() => {
@@ -77,6 +80,7 @@ export default function Button({
       className={`relative overflow-hidden border-2 border-black min-w-[300px] py-2 [clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)] ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => router.push(path)}
     >
       <div
         ref={overlayRef}

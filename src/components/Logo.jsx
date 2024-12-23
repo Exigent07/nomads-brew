@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitText from "@/utils/SplitText";
 import LogoIcon from "../../public/logo.svg";
+import { useRouter } from "next/navigation";
 
 export default function Logo({
   text = "Exigent",
@@ -32,6 +33,7 @@ export default function Logo({
   iconSizeClass = "h-6 w-6",
 }) {
   const iconRef = useRef(null);
+  const router = useRouter();
 
   useGSAP(() => {
     if (loading) {
@@ -67,6 +69,7 @@ export default function Logo({
       className={`flex items-center justify-center font-logo select-none ${className} ${loading ? 'cursor-wait' : 'cursor-pointer'}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => router.push("/")}
       style={{
         letterSpacing,
         ...style,
